@@ -2,7 +2,7 @@
 
 <body class="login">
     <form class="form-signin" action="" method="POST">
-        <center><img class="mb-4" src="../assets/img/logo.png" width="80%" height="80%">
+        <center><a href="/?page=login"><img class="mb-4" src="../assets/img/logo.png" width="80%" height="80%"></a>
         <h1 class="h3 mb-3 font-weight-normal">Logg inn</h1></center>
 
         <?php if(isset($_POST['login'])){ $core->userLogin(); } ?>

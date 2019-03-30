@@ -1,25 +1,36 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/#">USNTime</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/?page=home"><?php echo $this->name; ?></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+        <ul class="navbar-nav mr-auto">
+            <li class="<?php $this->activePage("home"); ?>">
+                <a class="nav-link" href="/?page=home">Hjem <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="<?php $this->activePage("attendance"); ?>"> 
+                <a class="nav-link" href="/?page=attendance">Oppmøte</a>
+            </li>
+
+            <li class="<?php $this->activePage("subjects"); ?>"> 
+                <a class="nav-link" href="/?page=subjects">Fagoversikt</a>
+            </li>
+
+            <li class="<?php $this->activePage("logs"); ?>"> 
+                <a class="nav-link" href="/?page=logs">Brukerlogg</a>
+            </li>
+        </ul>
+
+        <div class="dropdown show">
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Min konto</a>
+            
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="/?page=settings">Innstillinger</a>
+                <a class="dropdown-item" href="/?page=logout">Logg ut</a>
+            </div>
+        </div>
     </div>
-  </nav>
+</nav>
 </header>

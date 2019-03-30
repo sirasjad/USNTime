@@ -14,12 +14,17 @@ require($_SERVER['DOCUMENT_ROOT'].'/inc/user.class.php');
 $core = new USN;
 $core->validPage();
 $core->loginState();
-$core->setId();
 
 switch($_GET['page']){
     case 'login': include("pages/login.php"); break;
     case 'logout': $core->userLogout(); break;
     case 'dashboard': include("pages/dashboard.php"); break;
+    case 'register': include("pages/register.php"); break;
+    case 'subjects': include("pages/subjects.php"); break;
+    case 'attendance': include("pages/attendance.php"); break;
+    case 'view-subject': include("pages/view-subject.php"); break;
+    case 'register-attendance': include("pages/register-attendance.php"); break;
+    case 'manage-students': include("pages/manage-students.php"); break;
     default: include("pages/dashboard.php"); break;
 }
 
