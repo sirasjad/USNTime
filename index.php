@@ -25,6 +25,9 @@ switch($_GET['page']){
     case 'view-subject': include("pages/view-subject.php"); break;
     case 'register-attendance': include("pages/register-attendance.php"); break;
     case 'manage-students': include("pages/manage-students.php"); break;
+    case 'view-lecture': include("pages/view-lecture.php"); break;
+    case 'search-student': include("pages/search-student.php"); break;
+    case 'logs': include("pages/logs.php"); break;
     default: include("pages/dashboard.php"); break;
 }
 

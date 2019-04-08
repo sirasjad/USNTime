@@ -5,9 +5,9 @@
     <main role="main" class="flex-shrink-0">
         <div class="container">
             <h1 class="mt-5">Dashboard</h1>
-            <p class="lead">Some random shit</p>
+            <p class="lead">Her finner du diverse statistikk over fagene dine.</p>
 
-            <p>Some random shit</p>
+            <p>Statistikk og grafer kommer senere.</p>
         </div>
     </main>
 

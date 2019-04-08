@@ -4,7 +4,7 @@
     <?php $core->getNavbar(); ?>
     <main role="main" class="flex-shrink-0">
         <div class="container">
-            <h1 class="mt-5">Oppmøteregistrering</h1>
+            <h1 class="mt-5">Oppmøte</h1>
             <p class="lead">Fagemne: <?php $core->getSubjectName($_GET['id']); ?></p>
 
             <?php if(isset($_POST['register'])){ $core->newAttendance(); } ?>

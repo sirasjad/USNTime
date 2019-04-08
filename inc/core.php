@@ -15,7 +15,7 @@ class USN{
     }
 
     public function getTimezone(){
-        return date_default_timezone_set('Europe/Amsterdam');
+        return date_default_timezone_set('Europe/Oslo');
         return setlocale (LC_ALL, "no_NO.utf8");
     }
 
@@ -106,6 +106,11 @@ class USN{
         $usr->addSubject();
     }
 
+    public function updateSubject(){
+        $usr = new user;
+        $usr->editSubject();
+    }
+
     public function getSubjectName($id){
         $usr = new user;
         $usr->subjectName($id);
@@ -118,7 +123,37 @@ class USN{
 
     public function listStudents(){
         $usr = new user;
-        $usr->loadStudents();
+        $usr->loadEnrolledStudents();
+    }
+
+    public function loadAttendees(){
+        $usr = new user;
+        $usr->loadAttendedStudents();
+    }
+
+    public function findStudent(){
+        $usr = new user;
+        $usr->searchStudent();
+    }
+
+    public function deleteStudents(){
+        $usr = new user;
+        $usr->deleteAllStudents();
+    }
+
+    public function importStudents(){
+        $usr = new user;
+        $usr->importStudentList();
+    }
+
+    public function addStudent(){
+        $usr = new user;
+        $usr->addNewStudent();
+    }
+
+    public function loadLogs(){
+        $usr = new user;
+        $usr->listLogs();
     }
 }
 
